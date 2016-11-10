@@ -1,0 +1,35 @@
+<div class="container" >
+    <div class="col-md-10 col-md-offset-1">
+        <div class="row unit">
+            <div class="col-md-2"><span>Item</span></div>
+            <div class="col-md-2"><span>Product Id</span></div>
+            <div class="col-md-2"><span>Quantity</span></div>
+            <div class="col-md-2"><span>Price</span></div>
+            <div class="col-md-2"><span>Remove Item</span></div>
+            <div class="col-md-2"><span>Total</span></div>
+        </div>
+        <div class="cart-header" ng-repeat="product_obj in cart_products track by $index">
+           <div class="row unit1">
+               <div class="col-md-2 thumbnail">
+                    <img ng-src="{{product_obj.product.fileLocation}}" class="img-responsive"/>
+               </div>
+               <div class="col-md-2 text-left">
+                   <span>{{product_obj.product.id }}</span>
+               </div>
+               <div class="col-md-2 text-left">
+                     <span><input type="text" class="mini_input" ng-model="product_obj.quantity" ng-change="changeQuantity(product_obj.product.id,product_obj.quantity)"/></span>
+               </div>
+               <div class="col-md-2 text-left">
+                   <span>{{product_obj.product.price}}</span>
+               </div>
+               <div class="col-md-2 text-center" style="font-size: 25px;">
+                   <a><span ng-click="removeProduct($index)"><i class="fa fa-times" aria-hidden="true" style="color: red;"></i></span></a>
+               </div>
+               <div class="col-md-2 text-left">
+                   <span>{{product_obj.product.price*product_obj.quantity}}</span>
+                </div>
+            </div>
+        </div>
+            <button class="btn btn-solid btn-danger" ng-click="clearAll()">ClearAll</button>
+    </div>
+</div>

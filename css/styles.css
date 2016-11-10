@@ -1,0 +1,40 @@
+.unit {
+	    background: #4CAF50;
+/*    padding: 4px;*/
+
+
+/*    display: inline-block;*/
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+/*    text-align: center;*/
+}
+.unit1{
+    font-size: 20px;
+/*    color: #fff;*/
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+}
+.cart_bag {
+    background-color: #81C784;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23),inset 1px 1px 0 0 hsla(0,0%,100%,.2);
+    padding: 5px 0;
+    text-align: center;
+    height: 41px;
+    color: #FFF;
+    border-radius: 2px;
+    font-weight: 500;
+    margin-top: 5px;
+    width: 120px;
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+}
+ul li {
+    padding-top: 12px;
+}
+.mini_input {
+width: 60px;
+}

@@ -1,0 +1,22 @@
+		<div class="container" >
+                <div class="row">
+                    <div class="col-md-12 unit">
+                        <h1>List Of Product Details</h1>
+                        <a ng-click="goto_cart()" class="cart_bag pull-right"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
+                    </div>
+                </div>
+                <div>
+                       <div class="row" >
+                            <div class="col-md-4" ng-repeat-start="product in products">
+                                <img ng-src="{{product.fileLocation}}" class="img-responsive"/>
+                                <ul>
+                                <li><strong ng-model="product.price">Price: {{product.price}}</strong></li>
+                                <li><strong>Quantity: <input type="text" class="mini_input" ng-model="product.quantity"/></strong></li>
+                                <li><button class="btn btn-solid btn-warning" ng-click="addItem(product.id, product.quantity)">Add To Cart</button></li>
+                              </ul>
+                            </div>
+                               <div class="clearfix" ng-if="$index%3==2"></div>
+                               <div ng-repeat-end=""></div>
+                        </div>
+                </div>
+            </div>
